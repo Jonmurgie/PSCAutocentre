@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2016 Amasty (https://www.amasty.com)
+ * @package Amasty_Finder
+ */
+--> 
+<config>
+    	<menu>
+	    <catalog>
+                <children>
+                    <amfinder translate="title" module="amfinder">
+                        <title>Product Finders</title>
+                        <sort_order>910</sort_order>
+                        <action>adminhtml/finder/index</action>
+                    </amfinder>
+                </children>
+            </catalog>
+	</menu>     
+   
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+                <admin>
+                    <children>
+                        <catalog>
+                            <children>
+                                <amfinder>
+                                    <title>Product Finders</title>
+                                </amfinder>
+                            </children>
+                        </catalog>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <amfinder>
+                                            <title>Product Finders</title>
+                                        </amfinder>
+                                    </children>
+                                </config>
+                            </children>
+                        </system> 
+                     </children>
+                </admin> 
+			</resources>
+		</acl>
+        <translate>
+            <modules>
+                <Amasty_Finder>
+                    <files>
+                        <default>Amasty_Finder.csv</default>
+                    </files>
+                </Amasty_Finder>
+            </modules>
+        </translate>
+</config> 

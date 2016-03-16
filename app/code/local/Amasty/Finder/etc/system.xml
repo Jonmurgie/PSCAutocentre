@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2016 Amasty (https://www.amasty.com)
+ * @package Amasty_Finder
+ */
+-->
+<config>
+    <sections>
+        <amfinder translate="label" module="amfinder">
+            <label>Product Parts Finder</label>
+            <tab>amasty</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>161816</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <partial_search translate="label">
+                            <label><![CDATA[Display `Find` button when]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>amfinder/source_type</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </partial_search>  
+                        <universal translate="label">
+                            <label><![CDATA[Use `universal` products]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Allows to add set of products to any search, but might slow down the pages in some cases]]></comment>
+                        </universal>
+                        <universal_last>
+                            <label><![CDATA[Show `universal` products last]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <depends>
+                                <universal>1</universal>
+                            </depends>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </universal_last>
+                        <category_search>
+                            <label><![CDATA[Apply filter for current category only]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_search>
+                        <custom_category translate="label comment">
+                            <label>Custom Destination URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Eg. special-category.html  In most cases you don't need to set it. Useful when you want to redirect all search results to one category. It's NOT the url key. You can modify /amfinder/ url key in app/code/local/Amasty/Finder/etc/config.xml]]></comment>
+                        </custom_category>                           
+                        <seo_urls translate="label comment">
+                            <label><![CDATA[Use Param in URL]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[After search add a param in the url, so customers can bookmark the search results]]></comment>
+                        </seo_urls>
+                        <auto_submit translate="label">
+                            <label><![CDATA[Start search when value in the last dropdown is  selected]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </auto_submit>
+                        <reset_home translate="label">
+                            <label><![CDATA[Reset finder to Home Page]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reset_home>
+                        <clear_other_conditions translate="label comment">
+                            <label><![CDATA[Clear other (previous) finders conditions]]></label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Useful when you have 2 or more finders at the same page.]]></comment>
+                        </clear_other_conditions>
+                    </fields>
+                </general>
+                <import>
+                    <label>Import</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <archive_lifetime translate="label comment">
+                            <label><![CDATA[Import history lifetime (days)]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </archive_lifetime>
+                        <max_rows_per_import translate="label comment">
+                            <label><![CDATA[Max rows per import]]></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_rows_per_import>
+                    </fields>
+                </import>
+            </groups>
+        </amfinder>
+    </sections>
+</config>
